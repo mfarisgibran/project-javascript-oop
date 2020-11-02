@@ -9,7 +9,7 @@
   "private": true,
   "scripts": {
     "start": "node index",
-    "dev": "nodemon",
+    "dev": "nodemon index.js",
     "lint": "eslint '**/*.js'"
   },
   "devDependencies": {
