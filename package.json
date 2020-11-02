@@ -1,0 +1,13 @@
+{
+  "name": "project-javascript-oop",
+  "version": "0.1.0",
+  "description": "Project JavaScript OOP",
+  "main": "index.js",
+  "repository": "https://github.com/mfarisgibran/project-javascript-oop.git",
+  "author": "M Faris Gibran <mfarisgibran@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^7.12.1"
+  }
+}
