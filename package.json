@@ -7,7 +7,13 @@
   "author": "M Faris Gibran <mfarisgibran@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon",
+    "lint": "eslint '**/*.js'"
+  },
   "devDependencies": {
-    "eslint": "^7.12.1"
+    "eslint": "^7.12.1",
+    "nodemon": "^2.0.6"
   }
 }
