@@ -1,3 +1,10 @@
+const formatRupiah = (price) => {
+  return new Intl.NumberFormat('id-ID', {
+    style: 'currency',
+    currency: 'IDR',
+  }).format(price)
+}
+
 class Property {
   constructor(name, size, price, location) {
     this.name = name
@@ -6,15 +13,15 @@ class Property {
     this.location = location
   }
   showSizeInSQM = () => {
-    return this.size + ' m2'
+    return this.size + ' m²'
   }
-  showPriceInIDR = () => {
-    return 'IDR ' + this.price
+  showPrice = () => {
+    return formatRupiah(this.price)
   }
   showSummary = () => {
     return `${
       this.name
-    } is ${this.showSizeInSQM()} in size and its price is ${this.showPriceInIDR()}. It is located in ${
+    } is ${this.showSizeInSQM()} in size and its price is ${this.showPrice()}. It is located in ${
       this.location
     }.`
   }
@@ -31,7 +38,7 @@ class House extends Property {
   showSummary = () => {
     return `${
       this.name
-    } is ${this.showSizeInSQM()} in size and its price is ${this.showPriceInIDR()}. It is located in ${
+    } is ${this.showSizeInSQM()} in size and its price is ${this.showPrice()}. It is located in ${
       this.location
     } with ${this.showNumberOfStories()}.`
   }
@@ -39,7 +46,7 @@ class House extends Property {
 
 const vasakaNines = new Property('Vasaka Nines', 70, 1400000000, 'BSD City')
 const vasakaSoltera = new Property('Vasaka Soltera', 65, 1800000000, 'Pejaten')
-const avastaBekasi = new House('Avasta Bekasi', 200, 1500000000, 'Bekasi', 2)
+const avastaBekasi = new House('Avasta Bekasi', 200, 2200000000, 'Bekasi', 2)
 
 console.log(vasakaNines.showSummary())
 console.log(vasakaSoltera.showSummary())
